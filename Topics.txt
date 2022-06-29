@@ -4,8 +4,8 @@
 	   GoTo RezaFinal folder-wp_content,theme and create folder ThemeL4 - open ThemeL4 in VS Code
 	3. index.php, style.css, screenshot.jpg, functions.php
 	4. Functions.php --- index.php
-		a) wp_enqueue_style('identifier1',get_stylesheet_uri());  --- <?php wp_head();?>
-		b) wp_enqueue_style('identifier2',get_template_directory_uri().'/location');
+		a) wp_enqueue_style('style',get_stylesheet_uri());  --- <?php wp_head();?>
+		b) wp_enqueue_style('style-bootstrap',get_template_directory_uri().'/location');
 		c) wp_enqueue_script('identifier',
 		   get_template_directory_uri().'/location',array(),version,true); 
 								--- <?php wp_footer();?>
