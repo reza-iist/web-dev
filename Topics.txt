@@ -1,0 +1,56 @@
+	1. See Day-8 vedio (https://youtu.be/DvTQI_sUwro) and Run XAMPP 
+	2. Create folder RezaFinal in htdocs put WordPress files run in 
+	   localhost and create Database named rezafinal,
+	   GoTo RezaFinal folder-wp_content,theme and create folder ThemeL4 - open ThemeL4 in VS Code
+	3. index.php, style.css, screenshot.jpg, functions.php
+	4. Functions.php --- index.php
+		a) wp_enqueue_style('identifier1',get_stylesheet_uri());  --- <?php wp_head();?>
+		b) wp_enqueue_style('identifier2',get_template_directory_uri().'/location');
+		c) wp_enqueue_script('identifier',
+		   get_template_directory_uri().'/location',array(),version,true); 
+								--- <?php wp_footer();?>
+		d) add_theme_support('title-tag');
+		e) add_theme_support('post_thumbnails');
+		f) add_theme_support('custom-logo'); 
+			--- <?php the_custom_logo();?>
+		g) register_nav_menus([
+				'TM'=>'Primary';
+				'FM'=>'Footer';
+			]);
+			--- <?php wp_nav_menu([
+				'theme_location' => 'TM',
+				'menu_class'=> 'navbar_nav'
+			]);?>
+		h) register_sidebar([
+				'name' => 'Main Image',
+				'id' => 'mainimg',
+				'before_widget' => '<div class="MainImg">',
+				'after_widget' => '</div>'
+				]);
+				--- <?php dynamic_sidebar('mainimg');?>
+	5. Index.php
+		for slider
+			$query = new WP_Query([
+					'post_type' => 'post',
+					'category-name' =>'slider'
+				]);
+
+				<?php
+					$x=0;
+					while($query->have_posts()): $query->the_post();
+					$x++;+
+						the_post_thumbnail();
+						the_title();
+					endwhile;
+				?>
+	6. Index.php for ternary operation
+			echo (condition)?'T':'F';
+
+	7. Index.php for search
+		goto search input part use two attribute and create search.php page
+			value = "<?php get_search_query();?>" name="s"
+	8. Create Search.php
+		<h1>Under Construction Page </h1>
+	9. Separate header.php & footer.php file and add 404.php file
+
+	10. Review
