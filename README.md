@@ -16,7 +16,8 @@
 1. [Unsplash](https://unsplash.com/)
 2. [Pixa Bay](https://pixabay.com/)
 3. [Pexels](https://www.pexels.com/)  
-4. [Free Images](https://www.freeimages.com/)    
+4. [Free Images](https://www.freeimages.com/) 
+5. [Animated coding GIF](https://www.google.com/search?q=Animated+coding+GIF&tbm=isch&ved=2ahUKEwj-lpWw_tv6AhXjDrcAHXj9BIkQ2-cCegQIABAA&oq=Animated+coding+GIF&gs_lcp=CgNpbWcQDFAAWABgAGgAcAB4AIABAIgBAJIBAJgBAKoBC2d3cy13aXotaW1n&sclient=img&ei=4WBHY76iEOOd3LUP-PqTyAg&bih=657&biw=1366&rlz=1C1ONGR_enBD1024BD1024&hl=en)  
 
 ### Useful Resources for Web Design for Free Downloadable Illustrations:   
 1. [Undraw](https://undraw.co)
