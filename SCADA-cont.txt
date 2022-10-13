@@ -1,0 +1,49 @@
+Variables with local scope can be declared and initialized here.
+
+Dim arrHomeImageId, arrHomeImageMessage, numImages
+'Procedures with local scope can be implemented here.
+
+
+'This procedure is executed just once when the graphic module is started.
+Sub Graphics_OnStart()
+	'Open Initial Screen
+	Call OpenScreen("Home", "")
+	'Set initial values for local tags
+	Call SetInitialValues()
+End Sub
+
+'This procedure is executed continuously while the graphic module is running.
+Sub Graphics_WhileRunning()
+
+End Sub
+
+'This procedure is executed just once when the graphic module is closed.
+Sub Graphics_OnEnd()
+
+End Sub
+
+Function CheckIsSMA()
+	Dim ret
+	If $Num($GetComputerIP())=0 Then
+		ret = 1
+	Else
+		ret = 0
+	End If	
+	CheckIsSMA = ret
+End Function
+
+
+Function SetInitialValues()
+	'Set initial Language
+	$sysLocal.LanguageName = "English"
+	'Check if it is a SMA Thin Client
+	$sysLocal.IsSMA = CheckIsSMA()
+	'Industries_Wind
+	$Industries_Wind_TurbineId = 1
+	If $sysLocal.IsServer=0 Then
+		'$sysLocal.URLPrefix = 	"http://" & $GetComputerIP() & "/"	
+		$sysLocal.URLPrefix = 	"http://" & $sysServer.ServerIP & "/"	
+		Else
+		$sysLocal.URLPrefix = 	$GetAppPath() & "Web\"
+	End If
+End Function
